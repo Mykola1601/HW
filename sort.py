@@ -1,15 +1,4 @@
 
-"""
-
-зображення('JPEG', 'PNG', 'JPG', 'SVG')
-відео файли('AVI', 'MP4', 'MOV', 'MKV')
-документи('DOC', 'DOCX', 'TXT', 'PDF', 'XLSX', 'PPTX')
-музика('MP3', 'OGG', 'WAV', 'AMR')
-архіви('ZIP', 'GZ', 'TAR')
-невідомі розширення.
-archives, video, audio, documents, images
-
-"""
 
 
 # ============================================================
@@ -49,7 +38,7 @@ for c, l in zip(list(CYRILLIC_SYMBOLS), TRANSLATION):
 
 # ============================================================
 
-
+# command line args 
 if len(sys.argv) < 2:
     user_input = os.getcwd()
 else:
@@ -58,18 +47,18 @@ path = Path(user_input)
 if path.exists():
     if path.is_dir():
         os.chdir(user_input)
-
     else:
         print(path, "is file")
 else:
     print(path, " is not exist")
     sys.exit()
+
 # ============================================================
 
-
+# destination folder
 current_location = os.getcwd()
-print("Текущее местоположение- you want to sort dir:", current_location)
-res = (input("are you shure??? \r\n 'Y' for continue  >>>"))
+print("Текущее местоположение > you want to sort dir>>>", current_location)
+res = (input('are you shure??? \r\n "Y" for continue  >>>'))
 print(res.lower())
 if res.lower() != "y":
     print("Exit by user")
