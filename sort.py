@@ -321,7 +321,7 @@ lists()
 
 # ============================================================
 
-# list of archives
+# making list of archives
 a = Path('archives')
 for i in a.iterdir():
     if i.is_dir():
@@ -332,6 +332,7 @@ for i in a.iterdir():
 
 # ============================================================
 
+# print lists
 
 print("\nunknown_extensions=")
 print(set(unknown_extension))
@@ -353,7 +354,13 @@ print(arch)
 
 # ============================================================
 
+# happy end
+
+print("\nThe and")
+
+
 # ============================================================
 
 
-print("\nThe and")
+if __name__ == '__main__':
+    print("You imported hello.py")
